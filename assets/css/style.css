@@ -1,5 +1,5 @@
 /* Google fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 /* Asterisk wildcard selector to override default styles added by the browser */
 * {
@@ -13,14 +13,12 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* Generic project style */
+    /* Generic project styles */
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -55,7 +53,7 @@ header a {
     list-style-type: none;
 }
 
-#menu>li {
+#menu > li {
     margin-bottom: 1em;
 }
 
@@ -67,9 +65,9 @@ header a {
 nav {
     position: absolute;
     background-color: #ffffff;
-    padding: 0 1em;
-    left: 0;
     width: 100%;
+    left: 0;
+    padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
     top: 100%;
@@ -90,7 +88,7 @@ nav {
 
 /* Main content */
 main {
-    /* Enlarge main element to push footer down */
+    /* Enlarge main element to push footer down*/
     flex: 1 0 auto;
     /* Add margin at the top to prevent content from being covered by the header */
     margin-top: 47px;
@@ -119,12 +117,11 @@ main {
     padding-left: 10px;
 }
 
-#cover-text>h2,
-#cover-text>h3 {
+#cover-text > h2, #cover-text > h3 {
     color: #ffffff;
 }
 
-/* Reasons why keep running section */
+/* Reasons section */
 #reasons {
     width: 90%;
     margin: 20px auto;
@@ -132,17 +129,17 @@ main {
 
 #reasons h2 {
     margin-bottom: 20px;
-    font-size: 280%;
     text-align: center;
+    font-size: 280%;
 }
 
-#benefits-physical>div,
-#benefits-mental>div {
+#benefits-physical > div,
+#benefits-mental > div {
     line-height: 20px;
     margin-bottom: 20px;
 }
 
-#benfits p {
+#benefits p {
     padding: 0 20px;
 }
 
@@ -151,13 +148,12 @@ main {
     margin: 5px 0;
 }
 
-/* Background image */
 #circle-cover-bg {
-    width: 90vw;
+    background: url('../images/reasons-image.webp') no-repeat top center / cover;
     height: 90vw;
-    background: url("../images/reasons-image.webp") no-repeat top center/cover;
+    width: 90vw;
     margin-bottom: 20px;
-    /* Make square image into circle */
+    /* Makes the square image into a circle */
     border-radius: 50%;
     max-width: 300px;
     max-height: 300px;
@@ -169,9 +165,9 @@ main {
     justify-content: center;
 }
 
-/* Meetup times section */
+/* Meetup Times section */
 #times {
-    background: url("../images/dublin-city.webp") no-repeat center/cover;
+    background: url('../images/dublin-city.webp') no-repeat center/cover;
     /* Handles responsivity without the need for a media query */
     display: flex;
     flex-wrap: wrap;
@@ -182,11 +178,11 @@ main {
     background-color: rgba(0, 0, 0, .6);
     padding: 15px;
     text-align: center;
-    /* This will not wrap on screen of less than 400px wide.
+    /* This will not wrap on screens of less than 400px wide.
     Each div will expand to fill the available space on its row */
     flex-basis: 200px;
     flex-grow: 1;
-    /* Creates a grid of meetup time divs over the background image */
+    /* Creates a grid of meetup time dives over the background image */
     border: 2px solid white;
 }
 
@@ -207,12 +203,13 @@ main {
 
 /* Signup Form section */
 #signup {
+    background-image: url("../images/signup-image.webp");
     background-size: cover;
     background-position: 75%;
-    flex-grow: 1;
-    background-image: url("../images/signup-image.webp");
     padding: 20px 10% 0 10%;
+    flex-grow: 1;
 }
+
 
 #signup-form {
     color: #ffffff;
@@ -220,39 +217,42 @@ main {
     padding: 30px;
 }
 
-#signup-form > h2 {
+
+#signup-form>h2 {
     color: #fafafa;
     margin-bottom: 20px;
 }
 
+
 .text-input {
-    color: #fafafa;
     background: transparent;
+    color: #fafafa;
     width: 100%;
     height: 25px;
+    margin: 5px 0 20px 0;
     border: 1px solid #fafafa;
     border-radius: 2px;
     padding: 0 5px;
-    margin: 5px 0 20px 0;
 }
+
 
 .radio-buttons {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    
 }
+
 
 .join-button {
+    margin-top: 20px;
     border-radius: 2px;
+    padding: 15px 32px;
+    font-size: 100%;
     background-color: #454b1b;
     color: #fafafa;
-    font-size: 100%;
-    padding: 15px 32px;
-    margin-top: 20px;
 }
 
-/* Footer*/
+/* Footer */
 #social-networks {
     text-align: center;
     padding: 20px 0;
@@ -267,16 +267,16 @@ main {
     color: #3a3a3a;
 }
 
-/* Media query: tablets and larger (576px and up) */
+/* Media query: large or landscape phones (576px and up) */
 @media screen and (min-width: 576px) {
     #photos {
         column-count: 2;
         column-gap: 0;
     }
+}
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
-
     /* Header */
     nav {
         display: block;
@@ -290,7 +290,7 @@ main {
         display: flex;
     }
 
-    #menu>li {
+    #menu > li {
         padding-left: 1rem;
     }
 
@@ -304,7 +304,7 @@ main {
         margin: 0 0.5rem;
     }
 
-    /* Main Content */
+    /* Main content */
     main {
         /* Push main content down to accommodate larger header */
         margin-top: 79px;
@@ -314,14 +314,6 @@ main {
     #cover-text {
         width: 300px;
         right: 50px;
-    }
-
-    /* Reasons */
-    #reasons>h2 {
-        font-size: 280%;
-        margin: 20px;
-        text-transform: uppercase;
-        text-align: center;
     }
 
     /* Reasons section */
@@ -354,8 +346,8 @@ main {
     }
 
     #signup-form {
-        position: absolute;
         max-width: 400px;
+        position: absolute;
         left: 10%;
         top: 150px;
     }
@@ -368,12 +360,11 @@ main {
         background-color: #fafafa;
         color: #454b1b;
     }
-
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    #menu a:hover {
+    #menu a:hover{
         border-bottom: 1px solid #3a3a3a;
     }
 
@@ -381,31 +372,32 @@ main {
     #photos {
         column-count: 4;
     }
+}
 
-    @media screen and (min-width: 1200px) {    
-        /* Reasons section */
-        #benefits {
-            display: flex;
-            flex-direction: row;
-        }
-    
-        #benefits > div {
-            flex: 1;
-        }
-    
-        #benefits-image {
-            order: 0
-        }
-    
-        #benefits-mental {
-            order: 1;
-        }
-    
-        #benefits-mental > div {
-            align-self: flex-start;
-        }
-    
-        #benefits-physical > div {
-            align-self: flex-end;
-        }
+@media screen and (min-width: 1200px) {    
+    /* Reasons section */
+    #benefits {
+        display: flex;
+        flex-direction: row;
     }
+
+    #benefits > div {
+        flex: 1;
+    }
+
+    #benefits-image {
+        order: 0
+    }
+
+    #benefits-mental {
+        order: 1;
+    }
+
+    #benefits-mental > div {
+        align-self: flex-start;
+    }
+
+    #benefits-physical > div {
+        align-self: flex-end;
+    }
+}
